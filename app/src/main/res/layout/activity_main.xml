@@ -29,7 +29,7 @@
             android:gravity="center"
             android:text="AC"
             android:textColor="#29b6f6"
-            android:textSize="25dp"/>
+            android:textSize="25dp" />
 
         <TextView
             android:id="@+id/ndi"

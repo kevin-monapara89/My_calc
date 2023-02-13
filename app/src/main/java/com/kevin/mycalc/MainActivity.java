@@ -35,52 +35,42 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 input.setText("");
-                num1 = num2;
+                num1 = num2 = 0;
             }
         });
 
         n1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String get = input.getText().toString();
-                input.setText(get+"1");
+                setNumber("1");
             }
         });
 
         n2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String get = input.getText().toString();
-                input.setText(get+"2");
+                setNumber("2");
             }
         });
 
         n3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String get = input.getText().toString();
-                input.setText(get+"3");
+                setNumber("3");
             }
         });
 
         n4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String get = input.getText().toString();
-                input.setText(get+"4");
+                setNumber("4");
             }
         });
 
         n5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String get = input.getText().toString();
-                input.setText(get+"5");
+                setNumber("5");
             }
         });
 
@@ -88,55 +78,48 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String get = input.getText().toString();
-                input.setText(get+"6");
+                setNumber("6");
             }
         });
 
         n7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String get = input.getText().toString();
-                input.setText(get+"7");
+                setNumber("7");
             }
         });
 
         n8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String get = input.getText().toString();
-                input.setText(get+"8");
+                setNumber("8");
             }
         });
 
         n9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String get = input.getText().toString();
-                input.setText(get+"9");
+                setNumber("9");
             }
         });
 
         n0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String get = input.getText().toString();
-                input.setText(get+"0");
+                setNumber("0");
             }
         });
 
         n00.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String get = input.getText().toString();
-                input.setText(get+"00");
+                setNumber("00");
             }
         });
+    }
 
+    void setNumber(String n) {
+        String num = input.getText().toString();
+        input.setText(num+n);
     }
 }
