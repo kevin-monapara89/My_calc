@@ -4,11 +4,14 @@ import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Switch;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView n1, n2, n3, n4, n5, n6, n7, n8, n9, n0, n00, plus, ac, input;
+    TextView n1, n2, n3, n4, n5, n6, n7, n8, n9, n0, n00, plus, ac, ans, minus, input;
+
+    int num1, num2, sign;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -30,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         plus = findViewById(R.id.plus);
         input = findViewById(R.id.input);
         ac = findViewById(R.id.ac);
+        ans = findViewById(R.id.ans);
+
 
         ac.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
         n7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 setNumber("7");
             }
         });
@@ -92,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
         n8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 setNumber("8");
             }
         });
@@ -114,6 +121,43 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 setNumber("00");
+            }
+        });
+
+        plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String num = input.getText().toString();
+                num1 = Integer.parseInt(num);
+                sign = 1;
+            }
+        });
+
+        minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String num = input.getText().toString();
+                num1 = Integer.parseInt(num);
+                sign = 2;
+            }
+        });
+
+        ans.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String num = input.getText().toString();
+                num2 = Integer.parseInt(num);
+
+                switch (sign) {
+                    case 1:
+                        input.setText(""+(num1+num2));
+                        break;
+
+                    case 2:
+                        input.setText(""+(num1-num2));
+                        break;
+                }
             }
         });
     }

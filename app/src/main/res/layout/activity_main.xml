@@ -96,7 +96,7 @@
             android:textSize="25dp"/>
 
         <TextView
-            android:id="@+id/nmi"
+            android:id="@+id/minus"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -245,6 +245,7 @@
             android:textSize="25dp"/>
 
         <TextView
+            android:id="@+id/ans"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
