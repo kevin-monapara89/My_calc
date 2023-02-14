@@ -133,15 +133,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        minus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String num = input.getText().toString();
-                num1 = Integer.parseInt(num);
-                sign = 2;
-            }
-        });
-
         ans.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
