@@ -100,6 +100,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="#e1f5ff"
             android:gravity="center"
             android:text="-"
             android:textColor="#29b6f6"
